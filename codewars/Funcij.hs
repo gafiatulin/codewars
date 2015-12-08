@@ -1,5 +1,6 @@
 -- Functions of Integers on Cartesian Plane
 -- http://www.codewars.com/kata/559e3224324a2b6e66000046
+-- See Funcij.pdf for explanation.
 
 module Codewars.Kata.Funcij where
 
