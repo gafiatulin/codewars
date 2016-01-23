@@ -1,5 +1,5 @@
 -- Fibonacci Rabbits
--- http://www.codewars.com/kata/5559e4e4bbb3925164000125/s
+-- http://www.codewars.com/kata/5559e4e4bbb3925164000125/
 
 module Codewars.Kata.Rabbits where
 
