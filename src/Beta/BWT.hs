@@ -1,5 +1,5 @@
 -- Burrows-Wheeler-Transformation
--- http://www.codewars.com/users/gafiatulin
+-- http://www.codewars.com/kata/54ce4c6804fcc440a1000ecb/
 
 module BWT where
 

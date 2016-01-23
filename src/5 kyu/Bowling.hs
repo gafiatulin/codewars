@@ -1,5 +1,5 @@
 -- Bowling score calculator
--- http://www.codewars.com/users/gafiatulin
+-- http://www.codewars.com/kata/5427db696f30afd74b0006a3/
 
 module Bowling where
 
