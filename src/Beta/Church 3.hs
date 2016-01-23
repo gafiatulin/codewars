@@ -1,3 +1,6 @@
+-- Church numbers: find the predecessor and subtract
+-- http://www.codewars.com/kata/546ed19635a6610900000aa1/
+
 {-# LANGUAGE RankNTypes #-}
 
 module Haskell.Codewars.Church where
