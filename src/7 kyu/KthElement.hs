@@ -1,5 +1,5 @@
 -- Find the k-th Element of a list safely
--- http://www.codewars.com/kata/54411212cf36259c04000f04/train/haskell
+-- http://www.codewars.com/kata/54411212cf36259c04000f04/
 
 module KthElement where
 
