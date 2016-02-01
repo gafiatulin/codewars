@@ -6,4 +6,4 @@ module VowelIndices where
 import Data.List (findIndices)
 
 vowelIndices :: String -> [Integer]
-vowelIndices = map (fromIntegral . succ) . findIndices (`elem` "aeiouAEIOU")
+vowelIndices = map (fromIntegral . succ) . findIndices (`elem` "aeiouyAEIOUY")
