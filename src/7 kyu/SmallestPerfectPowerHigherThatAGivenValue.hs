@@ -4,4 +4,6 @@
 module Kata.SmallestPerfectPowerHigherThatAGivenValue where
 
 findNextPower :: Integer -> Integer -> Integer
-findNextPower n p = (^p) . ceiling $ (fromIntegral n)**(1 / fromIntegral p)
+findNextPower n p = (^p) . f $ k
+  where k = ceiling $ fromIntegral n ** (1 / fromIntegral p)
+        f = if k ^ p == n then succ else id

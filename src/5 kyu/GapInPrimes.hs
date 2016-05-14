@@ -7,5 +7,5 @@ import Data.List (find)
 import Control.Arrow ((&&&))
 
 gap :: Integer -> Integer -> Integer -> Maybe (Integer, Integer)
-gap g m n = find (\(a, b) -> b-a == g) . uncurry zip . (id &&& tail) . filter isPrime $ [m..n]
+gap g m n = find (\(a, b) -> b-a == g) . uncurry zip . (id &&& drop 1) . filter isPrime $ [m..n]
     where isPrime n = all (\d -> n `mod` d  /= 0) [2 .. floor . sqrt . fromIntegral $ n]
