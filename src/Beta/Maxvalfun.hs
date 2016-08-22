@@ -1,3 +1,6 @@
+-- Finding the Closest Maximum Values of a Function to an Upper Limit
+-- https://www.codewars.com/kata/56085481f82c1672d000001f
+
 module Codewars.G964.Maxvalfun where
 
 import Data.List (nub, sortBy)
