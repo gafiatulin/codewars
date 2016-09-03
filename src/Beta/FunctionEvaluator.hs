@@ -7,7 +7,7 @@ import qualified Data.Map as M
 import Control.Arrow (second, (&&&))
 
 evaluateFunction :: Ord a => (a -> Either b ([a], [b] -> b)) -> a -> b
-evaluateFunction f a = snd $ eval (M.empty, a) 
+evaluateFunction f a = snd $ eval (M.empty, a)
     where eval (m, a) = case M.lookup a m of
               Nothing -> eval (M.insert a (f a) m, a)
               Just (Left b) -> (m, b)
