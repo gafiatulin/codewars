@@ -3,6 +3,7 @@
 
 module ISO where
 
+import Data.Void
 import Data.Tuple(swap)
 import Control.Arrow ((***), (+++))
 
@@ -50,6 +51,12 @@ isoUnMaybe m@(mamb, mbma) = (get . mamb . Just, substL $ isoUnMaybe $ symm m)
           get Nothing = getJust (mamb Nothing)
           getJust (Just b) = b
           getJust Nothing = undefined
+
+isoEU :: ISO (Either [()] ()) (Either [()] Void)
+isoEU = (Left . either ( (): ) (const []), ab)
+    where ab (Left []) = Right ()
+          ab (Left (_:x)) = Left x
+          ab (Right v) = absurd v
 
 isoSymm :: ISO (ISO a b) (ISO b a)
 isoSymm = (symm, symm)
