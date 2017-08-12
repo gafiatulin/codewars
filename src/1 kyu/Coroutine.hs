@@ -20,6 +20,10 @@ import Preloaded
 apply :: Coroutine r u d a -> (Command r u d a -> r) -> r
 apply = runCoroutine
 
+instance Applicative (Coroutine r u d) where
+  pure  = return
+  (<*>) = ap
+
 instance Monad (Coroutine r u d) where
     return x = Coroutine (\k -> k (Done x))
     f >>= g  = Coroutine (\k -> apply f (\c' -> case c' of
